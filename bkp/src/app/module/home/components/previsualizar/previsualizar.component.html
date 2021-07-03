@@ -1,0 +1,51 @@
+<div class="container pt-4" id="previo">
+  <div id="vista2">
+    <div class="p-5">
+      <img src="assets/images/logo/logoUAwhite.png" class="docimage" alt="">
+
+      <h1 id="informe" class="py-3">Informe de Actividades</h1>
+
+      <h3>{{tareas |uppercase}}</h3>
+      <p class="mt-4"><strong>Periodo:</strong></p>
+      <blockquote>
+
+        <p>Inicio: <strong id="startDate">{{tareas.report.periodoInicio}}</strong> hasta <strong id="endDate">{{tareas.report.periodoFin}}</strong></p>
+      </blockquote>
+      <p class="mt-4"><strong>Actividades:</strong></p>
+
+      <table class="table table-bordered" id="activityTable">
+        <thead class="thead-dark">
+        <tr>
+          <th style="width: 30%;">Actividad</th>
+          <th style="width: 50%;">Descripción</th>
+          <th style="width: 20%;">Horas</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="tr_0" *ngFor="let tar of tareas.acti">
+          <td style="width: 30% !important;">
+            <p class="m-0">{{tar.actividad}}</p>
+          </td>
+          <td style="width: 50% !important;">
+            <p class="m-0">{{tar.descripcion}}</p>
+          </td>
+          <td style="width: 20% !important;">
+            <p class="m-0">{{tar.duracion|number}}</p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <p class="mt-4"><strong>Rubro: <span id="rubro">{{tareas.rubros}}</span></strong>
+      </p>
+
+
+      <textarea rows="1" id="comments" disabled>{{tareas.report.addComent}}</textarea>
+
+    <button  *ngIf="estado==false" (click)="aceptar()">{{ap}}</button>
+      <button  *ngIf="estado==false" (click)="rechazado()">Rechazar</button>
+
+    </div>
+
+  </div>
+
+</div>

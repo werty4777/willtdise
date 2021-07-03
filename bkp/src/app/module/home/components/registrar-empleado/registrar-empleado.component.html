@@ -1,0 +1,82 @@
+<div class="body">
+  <div class="page-wrapper p-t-100 p-b-50">
+    <div class="wrapper wrapper--w900">
+      <div class="card card-6 border-light">
+        <div class="card-heading">
+          <h2 class="title">Registrar Usuario</h2>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="form">
+            <div class="form-row">
+              <div class="name">Nombre </div>
+              <div class="value">
+                <input class="input--style-6" type="text" name="name" formControlName="name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name">Apellido </div>
+              <div class="value">
+                <input class="input--style-6" type="text" name="apellido" formControlName="lastName">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name">Correo Electrónico</div>
+              <div class="value">
+                <div class="input-group">
+                  <input class="input--style-6" type="email" name="email" placeholder="example@email.com" formControlName="email">
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name">Teléfono</div>
+              <div class="value">
+                <input class="input--style-6" type="text" name="phone" formControlName="phone">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name">Género</div>
+              <div class="col-sm-7 col-md-7">
+                <div id="radioBtn" class="btn-group">
+                  <a  class="btn btn-sm active" data-toggle="gender" data-title="M" (click)="sexus('masculino')" value="Masculino" >Masculino</a>
+                  <a   class="btn btn-sm notActive" data-toggle="gender" data-title="F" value="Femenino" (click)="sexus('femenino')" >Femenino</a>
+                </div>
+                <input type="hidden" name="gender" id="gender">
+              </div>
+
+            </div>
+            <div class="form-row">
+              <div class="name">Subir foto</div>
+              <div class="value">
+                <div class="input-group js-input-file">
+
+
+
+                  <mat-form-field>
+                    <ngx-mat-file-input formControlName="photo" placeholder="Escoger Imagen" (change)="upload($event)" ></ngx-mat-file-input>
+                    <mat-icon matSuffix>folder</mat-icon>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="name">Cargo</div>
+              <div npm uninstall="col-sm-7 col-md-7">
+                <div id="radioBtn" class="btn-group">
+                  <a class="btn btn-sm active" data-toggle="cargo" data-title="trabajador"  (click)="role(2)">Trabajador</a>
+                  <a class="btn btn-sm notActive" data-toggle="cargo" data-title="jefatura"  (click)="role(3)">Jefatura</a>
+                  <a class="btn btn-sm notActive" data-toggle="cargo" data-title="rrhh"  (click)="role(1)">RRHH</a>
+                </div>
+                <input type="hidden" name="cargo" id="cargo">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn--radius-2 btn--blue-2" type="button" (click)="registrar()">Registrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

@@ -1,0 +1,155 @@
+#formulario {
+  background: transparent;
+  width: 50%;
+  min-height: 100vh;
+}
+
+#previo {
+  background: transparent;
+  width: 50%;
+  min-height: 100vh;
+}
+
+.screen {
+  display: flex;
+  background-image: linear-gradient(rgb(242, 139, 46, 0.5) 0%, rgba(100, 0, 100, 0.5) 100%), url('src/assets/images/bg.jpg');
+}
+
+@media (max-width: 992px) {
+  .screen {
+    display: block;
+  }
+  #formulario {
+    width: 100%;
+    background-image: linear-gradient(rgb(242, 139, 46, 0.5) 0%, rgba(100, 0, 100, 0.5) 100%), url('src/assets/images/bgbox2.jpg');
+  }
+  #previo {
+    width: 100%;
+    background-image: linear-gradient(rgb(242, 139, 46, 0.5) 0%, rgba(100, 0, 100, 0.5) 100%), url('src/assets/images/bgbox1.jpg');
+  }
+  .row-remove {
+    padding-top: 3em;
+    width: 100%;
+    display: flexbox;
+  }
+  #vista,#vista2 {
+    margin: 0;
+    padding: 0;
+    width: 97%;
+  }
+}
+
+#vista,#vista2 {
+  margin: auto;
+  width: 95%;
+  min-height: 95vh;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+blockquote {
+  /* margin: 1.2em 0; */
+  color: rgba(0, 0, 0, .5);
+  padding-left: 1.5em;
+  border-left-color: hsla(0, 0%, 100%, .1);
+  border-left: 5px solid rgba(0, 0, 0, .1);
+}
+
+#comments,
+#comments:focus {
+  display: block;
+  width: 100%;
+  height: 150px;
+  border: none;
+  resize: none;
+  outline: none;
+
+}
+
+#comentarios {
+  overflow: hidden;
+  resize: none;
+  height: 100px;
+}
+
+.docimage {
+  height: 50px;
+  width: 300px;
+  margin-top: 0;
+  padding-top: 0;
+  margin-left: calc(100% - 320px);
+}
+
+.activityInput {
+  width: 29%;
+  overflow: hidden;
+  resize: none;
+}
+
+.descInput {
+  width: 44%;
+  overflow: hidden;
+  resize: none;
+}
+
+.hoursInput {
+  width: 19%;
+}
+
+.row-remove {
+  width: 5%;
+}
+
+.form-control:focus {
+  border-color: rgb(242, 139, 46, 0.5);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(242, 139, 46, 0.5);
+  outline: 0 none;
+}
+
+.removeB {
+  color: white;
+}
+
+tbody {
+  flex: 1 1 auto;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+tr {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+td {
+  overflow-wrap: break-word;
+}
+
+button[type="submit"] {
+  background-color: #E67E22;
+  color: white;
+  transition-duration: 0.4s;
+  width: 50%;
+  border: none;
+  height: 45px;
+}
+
+button[type="submit"]:first-of-type {
+  border-radius: 7px 0 0 7px;
+}
+
+button[type="submit"]:last-of-type {
+  border-radius: 0 7px 7px 0;
+}
+
+button[type="submit"]:hover {
+  background-color: white;
+  color: #E67E22;
+  border: 2px solid #E67E22;
+}
+
+.dateI {
+  width: 40%;
+}

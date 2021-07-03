@@ -1,0 +1,40 @@
+
+
+<div class="pt-5">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <img src="./assets/images/logo/logo.png">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="inicio()" href="/inicio" >Inicio
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+
+          <a class="nav-link" (click)="crearInforme()" *ngIf="estados==false">Crear Informe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="cerrarSession()">Cerrar Sesión</a>
+        </li>
+        <li class="nav-item" *ngIf="estado()">
+          <a class="nav-link"  href="/inicio/empleados" *ngIf="emp==false">Registrar Empleado</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+
+<footer class="py-2 bg-dark">
+  <div class="container ">
+    <p class="m-0 text-center text-white ">Copyright &copy; Universidad Autónoma del Perú 2020</p>
+  </div>
+</footer>
+</div>
