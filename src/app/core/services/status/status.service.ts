@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 })
 export class StatusService {
 
-  url = 'https://55e112e5033c.ngrok.io/';
+  url = 'https://light-cobra-28.loca.lt /';
 
   constructor(private http:HttpClient) {
     this.header=this.header.set("Authorization", localStorage.getItem('token'));
